@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="box/css/weather.css">
+</head>
+<body>
+    
+
+        <!-- HEAD -->
+        <div class="screen">
+            <div class="header">
+                <div class="head1">
+                    <img src="/box/logo.jpeg" alt="Đây là logo" class="img1">
+                    <a href="house.html" class="logo">QUEEN SWAN</a>
+                </div>
+                <div class="head2">
+                    <a href="house.html" class="btn">Home</a>
+                    <a href="about-us.html" class="btn">About us</a>
+                    <a href="shop.html" class="btn">Shop</a>
+                    <a href="weather.html" class="btn">Weather</a>
+                    <a href="login.html" class="btn">Log in</a>
+                    <a href="sign-up.html" class="btn"> Sign up</a>
+                    <a href="cart.html" onclick="check()" class="head3" id="menu">
+    
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+
+
+        <section class="vh-100" style="background-color: #ffe4e4;">
+            <div class="container py-5 h-100">
+          
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-8 col-lg-6 col-xl-4">
+          
+                  <div class="card" style="color: #4B515D; border-radius: 35px;">
+                    <div class="card-body p-4">
+          
+                      <div class="d-flex">
+                        <h6 id = "country" class="flex-grow-1">Warsaw</h6>
+                        <h6 id = "time" class="flex-grow-1">Warsaw</h6>
+                      </div>
+          
+                      <div class="d-flex flex-column text-center mt-5 mb-4">
+                        <h6 id='tem' class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> 13°C </h6>
+                      </div>
+          
+                      <div class="d-flex align-items-center">
+
+                        <div>
+                        </div>
+                      </div>
+          
+                    </div>
+                  </div>
+          
+                </div>
+              </div>
+          
+            </div>
+          </section>
+
+
+
+   <!-- FOOTER -->
+
+   <div class="footer">
+    <div class="footer-left">
+        <a href="house.html" class="footer-btn">Home</a>
+        <a href="about-us.html" class="footer-btn">About us</a>
+        <a href="weather.html" class="footer-btn">Weather</a>
+        <a href="login.html" class="footer-btn">Log in</a>
+        <a href="sign-up.html" class="footer-btn"> Sign up</a>
+    </div>
+    <div class="footer-mid">
+        <h1>About us</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi totam exercitationem cumque. Sed maiores, enim amet incidunt soluta cupiditate optio dolores consequuntur architecto exercitationem nihil aliquam earum debitis voluptatem neque!
+        Ad sit autem, aspernatur recusandae accusantium ex, consequuntur sed totam iste nulla, dolores dolorem neque nostrum possimus exercitationem quidem perspiciatis. Mollitia eius, qui quod ipsam aspernatur repellat commodi omnis ab.
+        Corporis maxime aperiam, ipsa temporibus totam omnis magnam magni inventore tempora blanditiis dignissimos, adipisci deleniti nemo perspiciatis id ipsum libero veritatis cum rem vitae, quisquam nulla in expedita! Quaerat, voluptatem!</p>
+    </div>
+    <div class="footer-right">
+        <h1>Contact us</h1>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+          <script>
+          
+          let country = document.getElementById('country')
+          let tem = document.getElementById('tem')
+          let icon = document.getElementById('')
+          let time = document.getElementById('time')
+          async function getdata(){
+            fetch('http://api.weatherapi.com/v1/current.json?key=0f3f9e81c62144a1808122008222911&q=Vietnam')
+            .then((response) => response.json())
+            .then((data)=>{
+              console.log(data);
+              // Sửa tên thành phố
+              country.innerHTML = data.location.name
+              tem.innerHTML = data.current.temp_c + "°C"
+              time.innerHTML = data.location.localtime
+            })
+          }
+    
+          getdata()
+          </script>
+
+
+
+
+
+
+        <script src="box/js/weather.js"></script>
+
+</body>
+</html>

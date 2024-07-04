@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/box/css/about-us.css">
+</head>
+<body>
+    
+
+    <!-- HEAD -->
+    <div class="screen">
+        <div class="header">
+            <div class="head1">
+                <img src="/box/logo.jpeg" alt="Đây là logo" class="img1">
+                <a href="house.html" class="logo">QUEEN SWAN</a>
+            </div>
+            <div class="head2">
+                <a href="house.html" class="btn">Home</a>
+                <a href="about-us.html" class="btn">About us</a>
+                <a href="shop.html" class="btn">Shop</a>
+                <a href="weather.html" class="btn">Weather</a>
+                <a href="login.html" class="btn">Log in</a>
+                <a href="sign-up.html" class="btn"> Sign up</a>
+                <a href="cart.html" onclick="check()" class="head3" id="menu">
+
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- SCREEN1 -->
+    <div class="mid">
+        <div class="contain">
+            <div class="up">BRAND STORY</div>
+            <div class="down">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi quibusdam ducimus excepturi, expedita porro voluptates nisi corrupti est, sapiente doloremque, architecto minima hic dolore laboriosam vitae? Eveniet quos esse eligendi!
+                Impedit voluptatum praesentium non optio unde ex necessitatibus nisi perferendis expedita, quaerat maiores, est velit! Accusantium ad aperiam libero rerum reiciendis explicabo repellat. Iste odio ab nam in, nulla dolor.
+                Necessitatibus obcaecati adipisci, quae eaque, id voluptas repellendus dolor veniam earum, fugit optio. Repellat architecto totam quas quo debitis accusantium dolorem facilis distinctio nam possimus cum, dicta deleniti in amet.
+                Saepe voluptates odit fuga ad, consequatur exercitationem delectus iste, reprehenderit atque ducimus ullam expedita! Maxime, eligendi molestiae. Dolore corporis dicta, deleniti accusantium pariatur aliquid deserunt quam fuga, ducimus, sunt veniam?
+                Eius, corporis non? Assumenda dolorum, hic necessitatibus blanditiis ducimus vero veritatis facilis laboriosam voluptates deleniti amet praesentium iure facere non commodi? Ipsum delectus sequi suscipit reiciendis quod quaerat quisquam. Commodi!
+                Commodi error reprehenderit harum debitis nihil. Nihil repudiandae molestiae ab iusto quisquam quod placeat optio laudantium saepe repellat adipisci sequi, tempora accusantium explicabo, debitis expedita ipsam libero. Similique, laboriosam itaque!
+                Necessitatibus corrupti maiores doloremque in voluptate, eius illum natus quod quia id repellat dignissimos tempore! Fugiat dolorum iure doloribus consequuntur in voluptate beatae possimus labore corrupti id voluptates, est nesciunt?</p>
+                <img class="img" src="https://images.pexels.com/photos/3294254/pexels-photo-3294254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+        <div class="footer-left">
+            <a href="house.html" class="footer-btn">Home</a>
+            <a href="about-us.html" class="footer-btn">About us</a>
+            <a href="weather.html" class="footer-btn">Weather</a>
+            <a href="login.html" class="footer-btn">Log in</a>
+            <a href="sign-up.html" class="footer-btn"> Sign up</a>
+        </div>
+        <div class="footer-mid">
+            <h1>About us</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi totam exercitationem cumque. Sed maiores, enim amet incidunt soluta cupiditate optio dolores consequuntur architecto exercitationem nihil aliquam earum debitis voluptatem neque!
+            Ad sit autem, aspernatur recusandae accusantium ex, consequuntur sed totam iste nulla, dolores dolorem neque nostrum possimus exercitationem quidem perspiciatis. Mollitia eius, qui quod ipsam aspernatur repellat commodi omnis ab.
+            Corporis maxime aperiam, ipsa temporibus totam omnis magnam magni inventore tempora blanditiis dignissimos, adipisci deleniti nemo perspiciatis id ipsum libero veritatis cum rem vitae, quisquam nulla in expedita! Quaerat, voluptatem!</p>
+        </div>
+        <div class="footer-right">
+            <h1>Contact us</h1>
+        </div>
+    </div>
+
+
+    <!-- WIFI -->
+    <div class="alert" id="error">
+        <i class="bi bi-wifi-off icon"></i>
+        <div class="content">
+            <div class="title">
+                Wifi disconnected!
+            </div>
+            <div class="des">
+                Please check your connection!
+            </div>
+        </div>
+        <i class="bi bi-x-circle close"></i>
+    </div>
+    <div class="alert" id="success">
+    <i class="bi bi-wifi icon"></i>
+    <div class="content">
+        <div class="title">
+            Wifi connected!
+        </div>
+        <div class="des">
+            Successfully connected!
+        </div>
+    </div>
+    <i class="bi bi-x-circle close"></i>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f42d96900b.js" crossorigin="anonymous"></script>
+    <script src="/box/js/about-us.js"></script>
+</body>
+</html>
